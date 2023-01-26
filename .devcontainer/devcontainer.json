@@ -1,12 +1,17 @@
 {
   // comments can be removed
+  
   // "image": "docker.io/<insert Docker username>/<insert Docker repo name>:<insert tag name>", // pre-build and push the image to Docker Hub for faster container creation
-  // to do pre-build an image: create an account and repo at hub.docker.com, install Docker, then run docker login, then in a directory with the Dockerfile file, run:
-  // docker build . -t <insert Docker username>/<insert Docker repo name>:<insert tag name> (replace items in <>, tag name can be anything, a date such as 20230125 is common)
+  
+  // to pre-build an image: create an account and public repo at hub.docker.com, install Docker, then run docker login, then in a directory with the Dockerfile file, run:
+  // docker build . -t <insert Docker username>/<insert Docker repo name>:<insert tag name> (replace items in <>, tag name can be anything, such as a date (20230125) or version)
   // then run docker push <insert Docker username>/<insert Docker repo name>:<insert tag name>
   // note: docker may require sudo
+  // note: info about image used for Dockerfile FROM statement: https://github.com/devcontainers/images/tree/main/src/base-ubuntu
+  
   "build": { "dockerfile": "Dockerfile" }, // remove this as well as the Dockerfile file if using a pre-made image (specify like above)
-    // also reduces startup time from 2.75 minutes to 45 seconds and ensures the same software versions are always initially installed
+    // using a pre-made image reduces creation time from 2.75 minutes to 45 seconds and ensures the same software versions are always initially installed
+    
   "customizations": { // VSCode extensions
     "vscode": {
       "extensions": ["vscjava.vscode-java-pack", "ms-vscode.cpptools-extension-pack"]
