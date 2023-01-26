@@ -17,7 +17,7 @@
       "extensions": ["vscjava.vscode-java-pack", "ms-vscode.cpptools-extension-pack"]
     }
   }// ,   // it may also be possible to add the ability to run graphical applications by adding the feature below
-  // however, this slows down container creation time to about 3.5 minutes instead of 45 seconds
+  // however, this installs packages during container creation, which slows down container creation time to about 3.5 minutes instead of 45 seconds
   // https://github.com/devcontainers/features/tree/main/src/desktop-lite
   // "features": {
   //  "ghcr.io/devcontainers/features/desktop-lite:1": {}
