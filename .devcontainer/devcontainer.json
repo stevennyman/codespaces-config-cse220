@@ -1,0 +1,20 @@
+{
+  // comments can be removed
+  // "image": "docker.io/<insert Docker username>/<insert Docker repo name>:<insert tag name>", // pre-build and push the image to Docker Hub for faster container creation
+  // to do pre-build an image: create an account and repo at hub.docker.com, install Docker, then run docker login, then in a directory with the Dockerfile file, run:
+  // docker build . -t <insert Docker username>/<insert Docker repo name>:<insert tag name> (replace items in <>, tag name can be anything, a date such as 20230125 is common)
+  // then run docker push <insert Docker username>/<insert Docker repo name>:<insert tag name>
+  // note: docker may require sudo
+  "build": { "dockerfile": "Dockerfile" }, // remove this as well as the Dockerfile file if using a pre-made image (specify like above)
+    // also reduces startup time from 2.75 minutes to 45 seconds and ensures the same software versions are always initially installed
+  "customizations": { // VSCode extensions
+    "vscode": {
+      "extensions": ["vscjava.vscode-java-pack", "ms-vscode.cpptools-extension-pack"]
+    }
+  }// ,   // it may also be possible to add the ability to run graphical applications by adding the feature below
+  // however, this slows down container creation time to about 3.5 minutes instead of 45 seconds
+  // https://github.com/devcontainers/features/tree/main/src/desktop-lite
+  // "features": {
+  //  "ghcr.io/devcontainers/features/desktop-lite:1": {}
+  //}
+}
