@@ -7,21 +7,17 @@
   // docker build . -t <insert Docker username>/<insert Docker repo name>:<insert tag name> (replace items in <>, tag name can be anything, such as a date (20230125) or version)
   // then run docker push <insert Docker username>/<insert Docker repo name>:<insert tag name>
   // note: docker may require sudo
-  // note: info about image used for Dockerfile FROM statement: https://github.com/devcontainers/images/tree/main/src/base-ubuntu
-  
-  // note: before pre-building, to reduce storage usage and reduce creation time from 45 seconds to 32 seconds
-  // change the FROM line in the Dockerfile to: FROM mcr.microsoft.com/devcontainers/universal:2
-  // info about this image: https://github.com/devcontainers/images/tree/main/src/universal
+  // note: info about image used for Dockerfile FROM statement: https://github.com/devcontainers/images/tree/main/src/universal
   
   "build": { "dockerfile": "Dockerfile" }, // remove this as well as the Dockerfile file if using a pre-made image (specify like above)
-    // using a pre-made image reduces creation time from 2.75 minutes to 45 seconds and ensures the same software versions are always initially installed
+    // using a pre-made image reduces creation time from 2.75 minutes to 32 seconds and ensures the same software versions are always initially installed
     
   "customizations": { // VSCode extensions
     "vscode": {
       "extensions": ["vscjava.vscode-java-pack", "ms-vscode.cpptools-extension-pack"]
     }
   }// ,   // it may also be possible to add the ability to run graphical applications by adding the feature below
-  // however, this installs packages during container creation, which slows down container creation time to about 3.5 minutes instead of 45 seconds
+  // however, this installs packages during container creation, which slows down container creation time to about 3.5 minutes instead of 32 seconds
   // it may also result in different versions of packages being installed over time as newer versions are released
   // https://github.com/devcontainers/features/tree/main/src/desktop-lite
   // can also be configured for automatic port forwarding: https://containers.dev/implementors/json_reference/
