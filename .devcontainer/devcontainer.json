@@ -20,6 +20,7 @@
   // however, this installs packages during container creation, which slows down container creation time to about 3.5 minutes instead of 45 seconds
   // it may also result in different versions of packages being installed over time as newer versions are released
   // https://github.com/devcontainers/features/tree/main/src/desktop-lite
+  // can also be configured for automatic port forwarding: https://containers.dev/implementors/json_reference/
   // "features": {
   //  "ghcr.io/devcontainers/features/desktop-lite:1": {}
   //}
