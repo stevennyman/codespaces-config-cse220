@@ -18,6 +18,7 @@
     }
   }// ,   // it may also be possible to add the ability to run graphical applications by adding the feature below
   // however, this installs packages during container creation, which slows down container creation time to about 3.5 minutes instead of 45 seconds
+  // it may also result in different versions of packages being installed over time as newer versions are released
   // https://github.com/devcontainers/features/tree/main/src/desktop-lite
   // "features": {
   //  "ghcr.io/devcontainers/features/desktop-lite:1": {}
