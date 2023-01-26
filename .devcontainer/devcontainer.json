@@ -3,6 +3,9 @@
   
   // "image": "docker.io/<insert Docker username>/<insert Docker repo name>:<insert tag name>", // pre-build and push the image to Docker Hub for faster container creation
   
+  // note: when pre-building, to reduce storage usage and reduce creation time from 45 seconds to 32 seconds
+  // change the FROM line in the Dockerfile to: FROM mcr.microsoft.com/devcontainers/universal:2
+  
   // to pre-build an image: create an account and public repo at hub.docker.com, install Docker, then run docker login, then in a directory with the Dockerfile file, run:
   // docker build . -t <insert Docker username>/<insert Docker repo name>:<insert tag name> (replace items in <>, tag name can be anything, such as a date (20230125) or version)
   // then run docker push <insert Docker username>/<insert Docker repo name>:<insert tag name>
